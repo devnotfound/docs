@@ -5,7 +5,7 @@ import { IconExternalLink, IconChevron } from '@/components/Icons';
 import Link from 'next/link';
 import { JS_PLATFORMS, Platform, JSPlatform } from '@/data/platforms';
 import { LayoutContext } from '@/components/Layout';
-import { PageNode } from 'src/directory/directory';
+import { PageNode } from '@/directory/directory';
 
 enum Levels {
   Category = 1,
@@ -190,6 +190,7 @@ export function MenuItem({
       >
         <Link
           className={`menu__list-item__link ${listItemLinkStyle} ${currentStyle}`}
+          aria-current={current ? 'page' : null}
           href={href}
           onClick={onLinkClick}
           passHref
